@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Portal</title>
+  <link rel="stylesheet" href="student.css">
+</head>
+<body>
+
+<div class="app-bg">
+
+  <div class="app-window">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand">🎓 SIS</div>
+      <nav>
+        <a class="active">Dashboard</a>
+        <a>Courses</a>
+        <a>Attendance</a>
+        <a>Marks</a>
+        <a>Calendar</a>
+        <a>Settings</a>
+        <a href="lecturer.html">access lecturer(temp)</a>
+        <a href="admin.html">access admin(temp)</a>
+      </nav>
+      <button class="logout">Logout</button>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <section class="welcome-card">
+
+  <div class="welcome-content">
+    <h1>Welcome back, Satish</h1>
+    <p>3rd Year · Computer Science</p>
+  </div>
+
+  <div class="welcome-visual">
+    <img src="assets/student.png" alt="Student illustration">
+  </div>
+
+</section>
+
+
+      <!-- STATS -->
+      <section class="stats">
+        <div class="stat-card">
+          <span>Attendance</span>
+          <h2>94%</h2>
+        </div>
+        <div class="stat-card">
+          <span>Avg Marks</span>
+          <h2>87%</h2>
+        </div>
+        <div class="stat-card">
+          <span>Progress</span>
+          <h2>Good</h2>
+        </div>
+      </section>
+
+      <!-- COURSES -->
+      <section class="courses">
+        <h2>Enrolled Courses</h2>
+        <div class="course-grid">
+          <div class="course-card">
+            <h3>OOPS</h3>
+            <p>Dr. Kumar</p>
+            <button>View</button>
+          </div>
+          <div class="course-card">
+            <h3>DBMS</h3>
+            <p>Dr. Meena</p>
+            <button>View</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- RIGHT PANEL -->
+    <aside class="right-panel">
+
+        <div class="panel-card notification-card">
+  <h3>🔔 Notifications</h3>
+  <ul id="notificationList"></ul>
+</div>
+
+
+    <div class="panel-card calendar-card">
+
+  <div class="calendar-title">
+    📅 <span>Calendar</span>
+  </div>
+
+  <div class="calendar-header">
+    <button id="prevMonth">‹</button>
+    <span id="monthYear"></span>
+    <button id="nextMonth">›</button>
+  </div>
+
+  <div class="calendar-days">
+    <span>Sun</span><span>Mon</span><span>Tue</span>
+    <span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+  </div>
+
+  <div class="calendar-grid" id="calendarGrid"></div>
+
+  <div class="calendar-tasks">
+    <h4>Important Dates</h4>
+
+    <div class="task-input">
+      <input type="text" id="eventInput" placeholder="Add exam / submission / meeting">
+      <button id="addEventBtn">+</button>
+    </div>
+
+    <ul id="eventList"></ul>
+  </div>
+
+</div>
+
+
+
+
+
+
+   <div class="panel-card todo-card">
+  <h3>📝 To-Do</h3>
+  <input type="text" id="todoInput" placeholder="Add task">
+  <ul id="todoList"></ul>
+</div>
+
+
+
+    </aside>
+
+  </div>
+</div>
+<script src="student.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Portal</title>
+  <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+
+<div class="app-bg">
+  <div class="app-window">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand">🛠️ Admin</div>
+      <nav>
+        <a class="active">Dashboard</a>
+        <a>Students</a>
+        <a>Lecturers</a>
+        <a>Courses</a>
+        <a>Assignments</a>
+        <a href="lecturer.html">access lecturer(temp)</a>
+        <a href="student.html">access student(temp)</a>
+      </nav>
+      <button class="logout" onclick="logout()">Logout</button>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <!-- DASHBOARD -->
+      <section class="stats">
+        <div class="stat-card">
+          <span>Total Students</span>
+          <h2 id="studentCount">0</h2>
+        </div>
+        <div class="stat-card">
+          <span>Total Lecturers</span>
+          <h2 id="lecturerCount">0</h2>
+        </div>
+        <div class="stat-card">
+          <span>Total Courses</span>
+          <h2 id="courseCount">0</h2>
+        </div>
+      </section>
+
+      <!-- ADD STUDENT -->
+      <section class="panel">
+        <h2>Add Student</h2>
+        <input id="studentName" placeholder="Student Name">
+        <input id="studentYear" placeholder="Year">
+        <button onclick="addStudent()">Add Student</button>
+      </section>
+
+      <!-- ADD LECTURER -->
+      <section class="panel">
+        <h2>Add Lecturer</h2>
+        <input id="lecturerName" placeholder="Lecturer Name">
+        <button onclick="addLecturer()">Add Lecturer</button>
+      </section>
+
+      <!-- ADD COURSE -->
+      <section class="panel">
+        <h2>Create Course</h2>
+        <input id="courseName" placeholder="Course Name">
+        <button onclick="addCourse()">Create Course</button>
+      </section>
+
+    </main>
+
+  </div>
+</div>
+
+<script src="./admin.js"></script>
+</body>
+</html>

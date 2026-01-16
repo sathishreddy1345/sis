@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lecturer Portal</title>
+  <link rel="stylesheet" href="lecturer.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2 class="brand">SIS</h2>
+
+    <nav>
+      <a class="active">Dashboard</a>
+      <a>Courses</a>
+      <a>Attendance</a>
+      <a>Marks</a>
+      <a>Notifications</a>
+      <a href="student.html">access student(temp)</a>
+      <a href="admin.html">access admin(temp)</a>
+    </nav>
+
+    <button class="logout">Logout</button>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- WELCOME -->
+    <section class="welcome-card">
+      <div class="welcome-text">
+        <h1>Welcome, Dr. Kumar</h1>
+        <p>Computer Science Department</p>
+      </div>
+
+      <div class="welcome-img">
+        <img src="assets/sir.png" alt="Lecturer illustration">
+      </div>
+    </section>
+
+    <div class="content">
+
+      <!-- LEFT AREA -->
+      <section class="left">
+
+        <!-- COURSES -->
+        <div class="card">
+          <h3>My Courses</h3>
+          <input type="text" id="courseName" placeholder="Enter course name">
+          <button onclick="createCourse()">Create Course</button>
+          <ul id="courseList"></ul>
+        </div>
+
+        <!-- ATTENDANCE & MARKS -->
+        <div class="card">
+          <h3>Student Actions</h3>
+
+          <select id="studentSelect">
+            <option value="Satish">Satish</option>
+            <option value="Ravi">Ravi</option>
+            <option value="Anita">Anita</option>
+          </select>
+
+          <div class="action-row">
+            <button onclick="markAttendance()">Mark Present</button>
+          </div>
+
+          <input type="number" id="marksInput" placeholder="Enter marks">
+          <button onclick="submitMarks()">Submit Marks</button>
+        </div>
+
+        <!-- NOTIFICATIONS -->
+        <div class="card">
+          <h3>Send Notification</h3>
+          <textarea id="notificationText" placeholder="Message to students"></textarea>
+          <button onclick="sendNotification()">Send</button>
+        </div>
+
+      </section>
+
+      <!-- RIGHT PANEL -->
+      <aside class="right">
+
+        <!-- CALENDAR -->
+        <div class="panel-card">
+          <h3>📅 Calendar</h3>
+
+          <div class="calendar-header">
+            <button id="prevMonth">‹</button>
+            <span id="monthYear"></span>
+            <button id="nextMonth">›</button>
+          </div>
+
+          <div class="calendar-days">
+          <span>Sun</span><span>Mon</span><span>Tue</span>
+          <span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+        </div>
+
+<div class="calendar-grid" id="calendarGrid"></div>
+
+
+          <input type="text" id="eventInput" placeholder="Add class / meeting">
+          <button id="addEventBtn">Add</button>
+        </div>
+
+        <!-- TODO -->
+        <div class="panel-card">
+          <h3>📝 Lecturer Tasks</h3>
+          <input type="text" id="todoInput" placeholder="Add task">
+          <ul id="todoList"></ul>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+</div>
+
+<script src="lecturer.js"></script>
+</body>
+</html>

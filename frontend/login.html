@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SIS Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+  <div class="login-card">
+
+    <!-- Left Panel -->
+    <div class="login-left">
+      <img src="./assets/logi.png" alt="logo" height="250px">
+      <h2>Student Information </h2>
+      <h2>System</h2>
+      <p>Manage student records efficiently</p>
+    </div>
+
+    <!-- Right Panel -->
+   <div class="login-right">
+      <p id="greeting" class="greeting"></p>
+
+      <h2 class="portal-title">Academic Portal</h2>
+
+
+
+  <input type="text" id="username" placeholder="Username">
+
+  <div class="password-box">
+  <input type="password" id="password" placeholder="Password">
+  <span class="toggle" onclick="togglePassword()">Show</span>
+</div>
+
+
+
+  <button onclick="login()">Access Portal</button>
+  <p id="error"></p>
+</div>
+
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
