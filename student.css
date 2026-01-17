@@ -562,3 +562,67 @@ body {
     font-size: 13px;
   }
 }
+/* =====================
+   CARD + IMAGE RESPONSIVE FIX
+===================== */
+
+@media (max-width: 768px) {
+
+  /* Welcome illustration */
+  .welcome-visual img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+  }
+
+  /* Welcome card spacing */
+  .welcome-card {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  /* Text resize */
+  .welcome-content h1 {
+    font-size: 21px;
+  }
+
+  .welcome-content p {
+    font-size: 13px;
+  }
+
+  /* ===== STAT CARDS ===== */
+  .stat-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .stat-card span {
+    font-size: 13px;
+  }
+
+  .stat-card h2 {
+    font-size: 22px;
+  }
+
+  /* Prevent cards from squeezing */
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-visual img {
+    max-height: 120px;
+  }
+
+  .stat-card h2 {
+    font-size: 20px;
+  }
+}
