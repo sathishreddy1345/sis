@@ -451,3 +451,114 @@ body {
   box-shadow: 0 8px 18px rgba(37,99,235,0.45);
 }
 
+/* =====================
+   MOBILE RESPONSIVE FIX
+===================== */
+
+@media (max-width: 768px) {
+
+  body {
+    background: #f5f9ff;
+  }
+
+  .app-bg {
+    padding: 12px;
+  }
+
+  .app-window {
+    flex-direction: column;
+    height: auto;
+    border-radius: 18px;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar {
+    width: 100%;
+    padding: 16px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sidebar nav {
+    display: none; /* hide menu on mobile */
+  }
+
+  .logout {
+    margin-top: 0;
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .brand {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+
+  /* ===== MAIN ===== */
+  .main {
+    padding: 16px;
+  }
+
+  /* ===== WELCOME CARD ===== */
+  .welcome-card {
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .welcome-content h1 {
+    font-size: 22px;
+  }
+
+  .welcome-content p {
+    font-size: 13px;
+  }
+
+  .welcome-visual img {
+    height: 130px;
+  }
+
+  /* ===== STATS ===== */
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* ===== COURSES ===== */
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+    padding: 16px;
+  }
+
+  /* ===== RIGHT PANEL ===== */
+  .right-panel {
+    width: 100%;
+    margin-left: 0;
+    height: auto;
+    padding: 12px;
+  }
+
+  .panel-card {
+    padding: 16px;
+  }
+
+  /* ===== CALENDAR ===== */
+  .calendar-grid div {
+    height: 32px;
+    font-size: 13px;
+  }
+
+  .calendar-days span {
+    font-size: 11px;
+  }
+
+  /* ===== TODO ===== */
+  .todo-card li {
+    font-size: 13px;
+  }
+}
